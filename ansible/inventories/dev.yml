@@ -1,0 +1,8 @@
+[tea-app-server]
+server1 ansible_host=""
+server1 ansible_user="Ubuntu"
+server2 ansible_host=""
+server2 ansible_host="ec2-user"
+[tea-app-server:vars]
+ansible-python-interpreter=/usr/bin/python3
+ansible_ssh_private_key_file = /home/ubuntu/keys/ansible-terraform.pem
