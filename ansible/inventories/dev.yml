@@ -1,8 +1,9 @@
-[tea-app-server]
-server1 ansible_host="54.82.77.217"
-server1 ansible_user="Ubuntu"
-server2 ansible_host="34.207.78.210"
-server2 ansible_host="ec2-user"
-[tea-app-server:vars]
-ansible-python-interpreter=/usr/bin/python3
-ansible_ssh_private_key_file = /home/ubuntu/keys/ansible-terraform.pem
+[app]
+worker1 ansible_host=52.54.116.196
+worker1 ansible_user=ubuntu
+worker2 ansible_host=34.201.119.173
+worker2 ansible_user=ec2-user
+[app:vars]
+ansible_python_interpreter=/usr/bin/python3
+ansible_ssh_private_key_file = /home/ubuntu/keys/arpanelfranklin.pem
+ansible_ssh_common_args='-o StrictHostKeyChecking=no'

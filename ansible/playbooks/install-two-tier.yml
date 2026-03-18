@@ -6,7 +6,7 @@
       git:
         repo: https://github.com/arpanelfranklin/Two-tier-Maven-app.git
     - name: docker compose
-    docker_compose:
-      project_src: ./Two-tier-Macen-app/
-      files: "docker-compose.yml"
-      state: present
+      docker_compose:
+        project_src: ./Two-tier-Macen-app/
+        files: "docker-compose.yml"
+        state: present

@@ -1,13 +1,13 @@
-name: Install Nginx 
-hosts: tea-app-server
-become: yes
+- name: Install Nginx 
+  hosts: app
+  become: yes
 
-tasks:
-  - name: Install Nginx
-    package:
-      name: nginx
-      state: latest 
-  - name: Start Nginx
-    service:
-      name: nginx
-      state: started
+  tasks:
+    - name: Install Nginx
+      package:
+        name: nginx
+        state: latest 
+    - name: Start Nginx
+      service:
+        name: nginx
+        state: started
