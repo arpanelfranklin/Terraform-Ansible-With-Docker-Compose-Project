@@ -1,6 +1,6 @@
 - name: Install Nginx 
   hosts: app
-  become: yes
+  become: true
 
   tasks:
     - name: Install Nginx

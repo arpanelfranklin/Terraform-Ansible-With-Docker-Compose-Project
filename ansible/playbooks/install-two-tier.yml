@@ -1,6 +1,6 @@
 - name: Running two tier app
   hosts: app
-  become: yes
+  become: true 
   tasks:
     - name: cloning app
       git:

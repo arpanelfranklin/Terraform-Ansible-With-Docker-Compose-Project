@@ -1,6 +1,6 @@
 - name: Install docker
   hosts: app
-  become: yes
+  become: true
   tasks:
     - name: Install required packages
       apt:
