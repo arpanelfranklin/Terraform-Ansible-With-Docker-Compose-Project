@@ -1,12 +1,18 @@
+
 - name: Running two tier app
   hosts: app
   become: true 
+  vars:
+    project_path: "/home/{{ ansible_user_id }}/Tea-app"
   tasks:
     - name: cloning app
       git:
         repo: https://github.com/arpanelfranklin/Tea-app.git
+        dest: "{{ project_path }}"
+        force: yes
     - name: docker compose
-      docker_compose:
-        project_src: ./Tea-app/
-        files: "docker-compose.yml"
+      community.docker.docker_compose_v2:
+        project_src: "{{ project_path }}"
+        files: 
+          - "docker-compose.yml"
         state: present
